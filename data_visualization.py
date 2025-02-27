@@ -4,8 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-def run(df: DataFrame):
-    print(f"hello: \n {df.head()}")
+def visualize(df: DataFrame):
     sns.displot(data=df, x=df["Weather"], y=df["Traffic_Level"])
     plt.show()
     sns.boxplot(data=df, x=df["Vehicle_Type"], y=df["Distance_km"])
