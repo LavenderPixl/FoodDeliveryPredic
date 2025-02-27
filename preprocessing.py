@@ -48,4 +48,5 @@ def preprocess(replacing: int):
     data = replace_str(data, "Weather")
     data = replace_str(data, "Traffic_Level")
     data = replace_str(data, "Time_of_Day")
-    print(data)
+    return data
+    # print(data)
