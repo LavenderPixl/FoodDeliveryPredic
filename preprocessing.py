@@ -50,3 +50,16 @@ def preprocess(replacing: int):
     data = replace_str(data, "Time_of_Day")
     return data
     # print(data)
+
+def tokenize(df: pd.DataFrame, column: str) :
+    counter = 0
+    token = {}
+    for index, row in df.iterrows() :
+        if not row[column] in token:
+            token.update({row[column]: counter})
+            counter = counter + 1
+    for x, y in token.items():
+        pd.set_option('future.no_silent_downcasting', True)
+        df = df.replace(x, y)
+    #print(df)
+    return df
