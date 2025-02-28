@@ -18,7 +18,7 @@ def main(df: pd.DataFrame) :
     df = tokenize(df, "Vehicle_Type")
 
     df.head()
-    x = df[['Distance_km', 'Weather', 'Traffic_Level', 'Time_of_Day', 'Vehicle_Type', 'Courier_Experience_yrs' ]]
+    x = df[['Distance_km', 'Weather', 'Traffic_Level', 'Time_of_Day', 'Vehicle_Type', 'Courier_Experience_yrs', "Preparation_Time_min" ]]
     y = df['Delivery_Time_min']
 
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=100)

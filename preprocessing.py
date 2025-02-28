@@ -6,7 +6,7 @@ csv_file = "Food_Delivery_Times.csv"
 
 def clean_input() -> pd.DataFrame:
     df = pd.read_csv(csv_file)
-    df = df.drop(columns=["Order_ID", "Preparation_Time_min"])
+    df = df.drop(columns=["Order_ID"])
     return df
 
 
